@@ -1,0 +1,24 @@
+/* mystyle.css */
+ul{
+    list-style-type: disc;
+    list-style: circle inside url('chat_1364861.png');
+}
+h1 {
+    font-size: 16pt;
+    color: green;
+}
+
+h1.myh1{
+    font-size: 25pt;
+    margin: 25px;
+    padding: 10px 50px 20px 50px;
+    border: 5px solid red;
+    border-radius: 50%;
+}
+
+h1:hover{
+    background-color: green;
+}
+body{
+    font-family: 'Kanit', serif;
+}

@@ -1,15 +1,120 @@
+
 <!DOCTYPE html>
 <html>
-    <hEaD>
-        <title>Page Title</title>
-        <meta charset="UTF-8" />
-    </hEaD>
-    <body>
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
-        ภาษาไทย           เว้นวรรค
 
+<head>
+    <title>CSS</title>
+    <meta charset="UTF-8" />
+    
+    <!-- http://localhost/88823665-camp-66/mystyle.css -->
+    <!-- http://localhost/mystyle.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.css"/>
+</head>
+<body>
+    <style>
+        /* internal css */
+        h1 {
+            color: red;
+        }
+        h1{
+            color: blue;
+        }
+        div {
+            width: 200px;
+            height: 65px;
+            background-color: coral;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          
+          #myid {
+            background-color: blue;
+          }
+          
+          .myclass {
+            background-color: gray;
+          }
+          
+          p {
+            background-color: red;
+          }
+          @media only screen and (max-width: 600px) {
+            p {
+                background-color: red !important;
+            }
+          }
+          
+    </style>
+    <p id="myid" class="myclass">
+        Test
+    </p>
+    <form>
+        <table>
+            <tr class="">
+                <td><label class="myh1" for="fname" style="color: red;"> ชื่อ</label></td>
+                <td><input type="text" id="fname" name="ชื่อ"><br></td>
+            </tr>
+            <tr>
+                <td><label for="lname"> สกุล</label></td>
+                <td><input type="text" id="lname" name="สกุล"><br></td>
+            </tr>
+            <tr>
+                <td><label for="birth"> วัน/เดือน/ปีเกิด</label></td>
+                <td><input type="date" id="birth" name="วัน/เดือน/ปีเกิด"><br>
+            </tr>
+            </td>
+            <tr>
+                <td><label for="age"> อายุ</label></td>
+                <td><input type="number" id="age" name="อายุ"><br></td>
+            </tr>
+            <tr>
+                <td><label for="sex"> เพศ</label></td>
+                <td><input type="radio" id="sex" name="เพศ">ชาย<input type="radio" id="sex" name="เพศ">หญิง<br></td>
+            </tr>
+            <tr>
+                <td><label for="image"> รูป</label></td>
+                <td><input type="file" id="image" name="รูป"><br></td>
+            </tr>
+            <tr>
+                <td><label for="address"> ที่อยู่</label></td>
+                <td><textarea rows="5" cols="50"></textarea><br></td>
+            </tr>
+            <tr>
+                <td><label for="color"> สีที่ชอบ</label></td>
+                <td>
+                    <select id="dropdown" name="dropdown">
+                        <option value="red">สีแดง</option>
+                        <option value="green">สีเขียว</option>
+                        <option value="yellow">สีเหลือง</option>
+                        <option value="blue">สีฟ้า</option>
+                        <option value="purple">สีม่วง</option>
+                        <option value="orange">สีส้ม</option>
+                        <option value="pink">สีชมพู</option>
+                        <option value="gray">สีเทา</option>
+                        <option value="black">สีดำ</option>
+                        <option value="white">สีขาว</option>
+                    </select>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="song"> เพลงที่ชอบ</label></td>
+                <td><input type="radio" id="song" name="เพื่อชีวิต">เพื่อชีวิต<input type="radio" id="song"
+                        name="ลูกทุ่ง">ลูกทุ่ง<input type="radio" id="song" name="อื่นๆ">อื่นๆ<br>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="accept" name="สีที่ชอบ">ยินยอมให้เก็บข้อมูล<br></td>
+            </tr>
+            <tr>
+                <td><button type="reset">Reset</button></td>
+                <td><button type="submit">Submit</button><br></td>
+            </tr>
+        </table>
+    </form>
+</body>
 
-        <test>ทดสอบภาษาไทย</test>
-    </body>
 </html>

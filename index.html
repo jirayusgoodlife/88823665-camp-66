@@ -11,81 +11,78 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="mystyle.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        body{
+            font-family: Kanit;
+        }
+    </style>
 </head>
 <body>
-    <style>
-        /* internal css */
-        h1 {
-            color: red;
-        }
-        h1{
-            color: blue;
-        }
-        div {
-            width: 200px;
-            height: 65px;
-            background-color: coral;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-          
-          #myid {
-            background-color: blue;
-          }
-          
-          .myclass {
-            background-color: gray;
-          }
-          
-          p {
-            background-color: red;
-          }
-          @media only screen and (max-width: 600px) {
-            p {
-                background-color: red !important;
-            }
-          }
-          
-    </style>
-    <p id="myid" class="myclass">
-        Test
-    </p>
-    <form>
-        <table>
-            <tr class="">
-                <td><label class="myh1" for="fname" style="color: red;"> ชื่อ</label></td>
-                <td><input type="text" id="fname" name="ชื่อ"><br></td>
-            </tr>
-            <tr>
-                <td><label for="lname"> สกุล</label></td>
-                <td><input type="text" id="lname" name="สกุล"><br></td>
-            </tr>
-            <tr>
-                <td><label for="birth"> วัน/เดือน/ปีเกิด</label></td>
-                <td><input type="date" id="birth" name="วัน/เดือน/ปีเกิด"><br>
-            </tr>
-            </td>
-            <tr>
-                <td><label for="age"> อายุ</label></td>
-                <td><input type="number" id="age" name="อายุ"><br></td>
-            </tr>
-            <tr>
-                <td><label for="sex"> เพศ</label></td>
-                <td><input type="radio" id="sex" name="เพศ">ชาย<input type="radio" id="sex" name="เพศ">หญิง<br></td>
-            </tr>
-            <tr>
-                <td><label for="image"> รูป</label></td>
-                <td><input type="file" id="image" name="รูป"><br></td>
-            </tr>
-            <tr>
-                <td><label for="address"> ที่อยู่</label></td>
-                <td><textarea rows="5" cols="50"></textarea><br></td>
-            </tr>
-            <tr>
-                <td><label for="color"> สีที่ชอบ</label></td>
-                <td>
-                    <select id="dropdown" name="dropdown">
+    <div class="container mt-3">
+        <form>
+            <div class="row mb-2">
+                <div class="col-4"><label class="form-label" for="fname">ชื่อ <span class="text-danger">*</span></label></div>
+                <div class="col"><input class="form-control" type="text" id="fname" placeholder="ชื่อ" name="ชื่อ"></div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-4"><label class="form-label" class="form-label" for="lname"> สกุล</label></div>
+                <div class="col"><input class="form-control" type="text" id="lname" name="สกุล"></div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-4"><label class="form-label" for="birth"> วัน/เดือน/ปีเกิด</label></div>
+                <div class="col"><input class="form-control"  type="date" id="birth" name="วัน/เดือน/ปีเกิด"></div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-4"><label class="form-label" for="age"> อายุ</label></div>
+                <div class="col"><input class="form-control"  type="number" id="age" name="อายุ"></div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-4"><label class="form-label" for="sex"> เพศ</label></div>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="เพศ" id="ชาย">
+                        <label class="form-check-label" for="ชาย">
+                            ชาย
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="เพศ" id="หญิง">
+                        <label class="form-check-label" for="หญิง">
+                            หญิง
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-4">
+                    <label class="form-label" for="image"> รูป</label>
+                </div>
+                <div class="col">
+                    <input class="form-control"  type="file" id="image" name="รูป">
+                </div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-4">
+                    <label class="form-label" for="address"> ที่อยู่</label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control"  id="address" rows="5" cols="50"></textarea>
+                </div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-4">
+                    <label class="form-label" for="color"> สีที่ชอบ</label>
+                </div>
+                <div class="col">
+                    <select class="form-control"  id="color" name="dropdown">
                         <option value="red">สีแดง</option>
                         <option value="green">สีเขียว</option>
                         <option value="yellow">สีเหลือง</option>
@@ -97,24 +94,55 @@
                         <option value="black">สีดำ</option>
                         <option value="white">สีขาว</option>
                     </select>
-                    <br>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="song"> เพลงที่ชอบ</label></td>
-                <td><input type="radio" id="song" name="เพื่อชีวิต">เพื่อชีวิต<input type="radio" id="song"
-                        name="ลูกทุ่ง">ลูกทุ่ง<input type="radio" id="song" name="อื่นๆ">อื่นๆ<br>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" id="accept" name="สีที่ชอบ">ยินยอมให้เก็บข้อมูล<br></td>
-            </tr>
-            <tr>
-                <td><button type="reset">Reset</button></td>
-                <td><button type="submit">Submit</button><br></td>
-            </tr>
-        </table>
-    </form>
+                </div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-4">
+                    <label class="form-label" for="song"> เพลงที่ชอบ</label>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="song" id="เพื่อชีวิต">
+                        <label class="form-check-label" for="เพื่อชีวิต">
+                            เพื่อชีวิต
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="song" id="ลูกทุ่ง">
+                        <label class="form-check-label" for="ลูกทุ่ง">
+                            ลูกทุ่ง
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="song" id="อื่นๆ">
+                        <label class="form-check-label" for="อื่นๆ">
+                            อื่นๆ
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          ยินยอมให้เก็บข้อมูล
+                        </label>
+                      </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <button type="reset" class="btn btn-secondary float-start">Reset</button>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-success float-end">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

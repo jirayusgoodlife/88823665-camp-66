@@ -6,6 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/welcome', function () {
-    return "<h1>Welcome</h1>";
+Route::get('/hello', function () {
+    return "<h1>Hello World!</h1>";
 });
